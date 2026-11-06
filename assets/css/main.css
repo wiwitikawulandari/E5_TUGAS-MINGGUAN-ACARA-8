@@ -944,6 +944,21 @@ section,
   cursor: pointer;    /* tambahan: kursor tangan karena kotak bisa diklik */
 }
 
+.services .service-item .icon .service-svg {
+  width: 44px;
+  height: 44px;
+  fill: none;
+  stroke: var(--accent-color);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.3s ease-in-out;
+}
+
+.services .service-item:hover .icon .service-svg {
+  stroke: var(--contrast-color);
+}
+
 .services .service-item:before {
   content: "";
   position: absolute;
@@ -1893,3 +1908,137 @@ section,
   min-width: 85px;
   max-width: 105px;
 }
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Paragraf yang memang harus tetap di tengah */
+.hero p,
+.section-title p,
+.call-to-action p,
+.copyright p {
+  text-align: center;
+}
+
+.hero h2 .hero-small {
+  display: inline-block;
+  font-size: 0.65em;
+  font-weight: 600;
+  letter-spacing: 4px;
+  margin-bottom: 8px;
+}
+
+.about .content .about-text {
+  width: fit-content;
+  max-width: 100%;
+}
+
+.about .content .about-text p {
+  width: 0;
+  min-width: 100%;
+}
+
+.about .icon-box {
+  background: var(--surface-color);
+  padding: 28px 26px;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.about .icon-box:hover {
+  transform: translateY(-4px);
+  border-bottom-color: var(--accent-color);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+.about .icon-box .icon-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  background: color-mix(in srgb, var(--accent-color), transparent 88%);
+  transition: all 0.3s ease;
+}
+
+.about .icon-box .icon-circle i {
+  font-size: 26px;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.about .icon-box:hover .icon-circle {
+  background: var(--accent-color);
+}
+
+.about .icon-box:hover .icon-circle i {
+  color: var(--contrast-color);
+}
+
+.about .icon-box h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  transition: color 0.3s;
+}
+
+.about .icon-box:hover h4 {
+  color: var(--accent-color);
+}
+
+.about .icon-box p {
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: left;
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+}
+
+@media (min-width: 1200px) {
+  .about .content {
+    justify-content: space-between;
+  }
+}
+
+.header .logo img {
+  height: 44px;
+  width: auto;
+  max-height: none;
+  margin-right: 10px;
+  filter: brightness(1.1) saturate(1.6) drop-shadow(0 0 6px rgba(255, 255, 255, 0.55));
+}
+
+/* ===== Konsistensi font ===== */
+/* Judul = Raleway */
+h1, h2, h3, h4, h5, h6,
+.stats .stats-item .purecounter,
+.footer .footer-about .logo span {
+  font-family: var(--heading-font);
+}
+.stats .stats-item .purecounter { font-weight: 800; }
+
+/* Isi = Roboto */
+p, label, input, textarea, .fact-box,
+.stats .stats-item p,
+.footer .footer-about p {
+  font-family: var(--default-font);
+}
+p { line-height: 1.7; }
+
+/* Menu, tombol, label = Poppins */
+.navmenu a,
+.about .content .about-btn,
+.call-to-action .cta-btn,
+.contact .php-email-form button[type=submit],
+.timeline .year,
+.hero p {
+  font-family: var(--nav-font);
+}
+.hero p { font-weight: 600; }
+.call-to-action .cta-btn { font-weight: 500; }
+.timeline .year { font-weight: 600; }
+
