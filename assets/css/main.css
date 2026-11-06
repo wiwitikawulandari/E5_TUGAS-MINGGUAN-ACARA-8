@@ -2042,3 +2042,5 @@ p { line-height: 1.7; }
 .call-to-action .cta-btn { font-weight: 500; }
 .timeline .year { font-weight: 600; }
 
+#services .service-item[data-bs-toggle="modal"] { cursor: pointer; }
+#bidangModal .modal-body img { max-height: 320px; object-fit: cover; }
